@@ -1,0 +1,618 @@
+:root {
+  /* Solid Color */
+  --black-color: #333333;
+  --white-color: #ffffff;
+  --cream-color: #fff6f6;
+  --gray-border-color: #e7e7e7;
+  --gray-text-color: #9c9c9c;
+  --orange-color: #f3ad0d;
+  --blue-color: #09b8ef;
+  --pastel-blue-color: #f4f7fe;
+  --green-color: #12f30d;
+  --red-color: #ef3209;
+  --dark-green-color: #1f9c24;
+
+  /* Gradient Color */
+  --gradient-orange: linear-gradient(87.53deg, #fac218 2.36%, #f2aa0b 100%);
+  --gradient-orange-dark: linear-gradient(
+    87.53deg,
+    #faa218 2.36%,
+    #f2880b 100%
+  );
+
+  /* Fonts */
+  --font-h1: normal normal 500 48px/61px "Poppins";
+  --font-h2: normal normal 600 24px/28px "Poppins";
+  --font-h3: normal normal 500 18px/34px "Poppins";
+  --font-body1: normal normal 400 18px/28px "Poppins";
+  --font-body2: normal normal 500 14px/24px "Poppins";
+  --font-caption: normal normal 400 12px/24px "Poppins";
+}
+
+/* Global Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font: var(--font-h1);
+}
+
+h3 {
+  font: var(--font-h3);
+}
+
+p {
+  font: var(--font-body1);
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  font: var(--font-body1);
+  border-radius: 8px;
+}
+
+.btn__contained,
+.btn__outlined {
+  padding: 5px 30px;
+}
+
+.btn__contained {
+  background: var(--gradient-orange);
+  color: var(--white-color);
+  transition: all 1s;
+}
+
+.btn__contained:hover {
+  background-color: var(--gradient-orange-dark);
+}
+
+.btn__outlined {
+  border: 1px solid var(--gray-border-color);
+}
+
+.btn__text {
+  font: var(--font-body1);
+  color: var(--orange-color);
+}
+
+nav {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  background: var(--black-color);
+  color: var(--white-color);
+}
+
+.container {
+  padding: 0px 10%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font: var(--font-body2);
+}
+
+span.brand__logo {
+  background: var(--gradient-orange);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+ul.menu {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style-type: none;
+}
+
+li.menu__item {
+  display: flex;
+  align-items: center;
+}
+
+.auth {
+  display: flex;
+  gap: 25px;
+}
+
+.auth__button {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+  width: 100%;
+  height: 580px;
+  background-color: var(--cream-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero__message {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero__image {
+  justify-self: flex-end;
+  margin-right: -48px;
+}
+
+/* Benefit Section */
+#benefit {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.benefit__detail {
+  flex: 50%;
+  padding-right: 13rem;
+}
+
+.benefit__list {
+  flex: 50%;
+}
+
+.benefit__description {
+  color: var(--gray-text-color);
+  margin-top: 34px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 41px;
+}
+
+.profile__image {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: 0 0;
+  border-radius: 24px;
+}
+
+.profile__name {
+  font: var(--font-body1);
+  font-weight: 600;
+}
+
+.profile__role {
+  font: normal normal 400 12px/12px "Poppins";
+  color: var(--gray-text-color);
+}
+
+hr {
+  width: 100%;
+  border-top: 1px solid var(--gray-border-color);
+  margin: 22px 0px;
+}
+
+.skill {
+  display: flex;
+  gap: 20px;
+}
+
+.skill__value {
+  font: var(--font-h2);
+}
+
+.skill__name {
+  font: var(--font-body1);
+  color: var(--gray-text-color);
+}
+
+.benefit__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+  z-index: 99;
+}
+
+.orange-line {
+  border-top: 10px solid var(--orange-color);
+}
+.blue-line {
+  border-top: 10px solid var(--blue-color);
+}
+.green-line {
+  border-top: 10px solid var(--green-color);
+}
+.red-line {
+  border-top: 10px solid var(--red-color);
+}
+
+.benefit__list .dot__pattern {
+  position: absolute;
+  bottom: -3.7rem;
+  left: -6rem;
+  z-index: -100;
+}
+
+.light-blue-bg {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  width: 650px;
+  height: 520px;
+  background-color: var(--pastel-blue-color);
+}
+
+.benefit__item {
+  width: 260px;
+  height: 260px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  background-color: var(--white-color);
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.benefit__icon {
+  width: 24px;
+}
+
+.benefit__name {
+  font: var(--font-body1);
+}
+
+.benefit__summery {
+  font: var(--font-body2);
+  color: var(--gray-text-color);
+}
+
+/* Feature Section Style */
+#feature {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+#feature .bg-pastel-blue {
+  width: 650px;
+  height: 400px;
+  background-color: var(--pastel-blue-color);
+  position: absolute;
+  left: 0;
+  top: 16rem;
+}
+
+.feature__left {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.feature__right {
+  flex: 1.2;
+}
+
+/* Feature Left */
+.feature__left .dot__pattern {
+  position: absolute;
+  bottom: -3rem;
+  right: 6.5rem;
+  z-index: -0;
+}
+
+.feature__card {
+  background-color: var(--white-color);
+  border-radius: 8px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.feature__card-one {
+  width: 240px;
+  height: fit-content;
+  position: absolute;
+  top: 1rem;
+  right: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.feature__card-two {
+  width: 360px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 24px;
+}
+
+.feature__label {
+  font: var(--font-body1);
+  font-weight: 700;
+}
+
+.feature__date-range {
+  font: var(--font-body2);
+  color: var(--gray-text-color);
+  margin-bottom: 24px;
+}
+
+.feature__date {
+  display: flex;
+  gap: 12px;
+  font: var(--font-caption) !important;
+  color: var(--gray-text-color);
+}
+
+.feature__date .date {
+  font: var(--font-caption);
+}
+
+.feature__description {
+  color: var(--gray-text-color);
+}
+
+.progressBar__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressBar__name,
+.progressBar__percentage {
+  font: var(--font-body2);
+  font-weight: 600;
+}
+
+.progressBar__bar {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  background-color: var(--gray-border-color);
+}
+
+.progressBar__bar .bar {
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 5px;
+  background-color: var(--dark-green-color);
+}
+
+.team {
+  margin-top: 12px;
+}
+
+.team__label {
+  font: var(--font-caption);
+  color: var(--gray-text-color);
+}
+
+.team__profile {
+  display: flex;
+  --gap: -0.5rem;
+}
+
+.team__img {
+  width: 32px;
+}
+
+.team__img:not(:first-child) {
+  margin-left: -10px;
+}
+
+/* Feature Right */
+.feature__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.feature__item {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid var(--gray-border-color);
+  padding: 32px 0;
+}
+
+.feature__number {
+  margin: 0 auto;
+  font: normal normal 600 20px/26px "Poppins";
+  color: var(--gray-text-color);
+}
+
+.feature__information {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature__title {
+  font: var(--font-h2);
+}
+
+a.feature__more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Testimonial Style */
+#testimoni {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.testimoni__container {
+  position: relative;
+  margin: 200px 0 50px;
+}
+
+.testimoni__container .dot__pattern {
+  position: absolute;
+  top: -15rem;
+  right: 14rem;
+}
+
+.testimoni__container .testimoni__background {
+  position: absolute;
+  top: -9rem;
+  left: -10.5rem;
+  background-color: var(--pastel-blue-color);
+  width: 100%;
+  height: 350px;
+  z-index: -1;
+}
+
+.testimoni__content {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.testimoni__content .testimoni__person {
+  width: 278px;
+}
+
+.testimoni__content .testimoni__detail {
+  width: calc(60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimoni__detail .testimoni__message {
+  font: var(--font-body1);
+  color: var(--gray-text-color)
+}
+
+.testimoni__detail .testimoni__biography {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.testimoni__detail .testimoni__biography .person-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.testimoni__detail .testimoni__biography .person-role {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray-text-color);
+}
+
+.testimoni__detail .testimoni__biography .icon-left {
+  transform: rotate(180deg);
+}
+
+
+/* Footer Section Style */
+#footer {
+  background-color: var(--black-color);
+  width: 100%;
+  height: fit-content;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: var(--white-color);
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__top h1 {
+  flex: 1.5;
+}
+
+.footer__top .footer__cta {
+  flex: 2;
+  display: flex;
+  gap: 64px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__bottom .brand {
+  flex: 1.2;
+}
+
+.footer__bottom .footer__menu {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.footer__bottom .footer__menu .list {
+  list-style: none;
+}
+
+.footer__bottom .footer__menu .list .list__item {
+  margin: 10px 0;
+}
+
+.social-media__email {
+  font: var(--font-body2);
+}
+
+.social-media__logo {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: end;
+}
+
+.social-media__logo img {
+  width: 32px;
+}
